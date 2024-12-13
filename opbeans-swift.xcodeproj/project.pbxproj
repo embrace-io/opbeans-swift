@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54EF0B4E2D0CD5A70032A9EF /* EmbraceIO in Frameworks */ = {isa = PBXBuildFile; productRef = 54EF0B4D2D0CD5A70032A9EF /* EmbraceIO */; };
 		B30674A85E340CE95D4CB9C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B306789693285C92CDE27F9D /* Assets.xcassets */; };
 		B30675D94736ADF6E39D4B00 /* opbeans-swift-App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30679BF7B318E45890C7F0A /* opbeans-swift-App.swift */; };
 		B3067A13AEA842BE8B383256 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B306789693285C92CDE27F9D /* Assets.xcassets */; };
@@ -167,6 +168,7 @@
 				F66060D0287737CB008D3C2D /* CoreTelephony.framework in Frameworks */,
 				F639652D278E50FE00B3C327 /* NetworkStatus in Frameworks */,
 				F639652F278E50FE00B3C327 /* OpenTelemetryApi in Frameworks */,
+				54EF0B4E2D0CD5A70032A9EF /* EmbraceIO in Frameworks */,
 				F6396531278E50FE00B3C327 /* OpenTelemetrySdk in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,6 +344,7 @@
 				F639652C278E50FE00B3C327 /* NetworkStatus */,
 				F639652E278E50FE00B3C327 /* OpenTelemetryApi */,
 				F6396530278E50FE00B3C327 /* OpenTelemetrySdk */,
+				54EF0B4D2D0CD5A70032A9EF /* EmbraceIO */,
 			);
 			productName = "ios-integration-testing (iOS)";
 			productReference = B306775E9D77A17AFA177BEA /* opbeans-swift.app */;
@@ -391,6 +394,7 @@
 			mainGroup = B306700B5C8E1847D4223874;
 			packageReferences = (
 				F639652B278E50FE00B3C327 /* XCRemoteSwiftPackageReference "opentelemetry-swift" */,
+				54EF0B4C2D0CD5A70032A9EF /* XCRemoteSwiftPackageReference "embrace-apple-sdk" */,
 			);
 			productRefGroup = B3067D0B78C5A8290FDDA265 /* Products */;
 			projectDirPath = "";
@@ -827,17 +831,30 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		54EF0B4C2D0CD5A70032A9EF /* XCRemoteSwiftPackageReference "embrace-apple-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/embrace-io/embrace-apple-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.6.0;
+			};
+		};
 		F639652B278E50FE00B3C327 /* XCRemoteSwiftPackageReference "opentelemetry-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/open-telemetry/opentelemetry-swift";
 			requirement = {
 				kind = exactVersion;
-				version = 1.9.1;
+				version = 1.12.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		54EF0B4D2D0CD5A70032A9EF /* EmbraceIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 54EF0B4C2D0CD5A70032A9EF /* XCRemoteSwiftPackageReference "embrace-apple-sdk" */;
+			productName = EmbraceIO;
+		};
 		F639652C278E50FE00B3C327 /* NetworkStatus */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F639652B278E50FE00B3C327 /* XCRemoteSwiftPackageReference "opentelemetry-swift" */;

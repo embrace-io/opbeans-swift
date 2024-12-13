@@ -13,12 +13,26 @@
 //   limitations under the License.
 
 import SwiftUI
+import EmbraceIO
 import OpenTelemetryApi
 import OpenTelemetrySdk
 
 class AppDelegate : NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
+        do {
+            try Embrace
+                .setup(
+                    options: .init(
+                        appId: "replace-me",
+                        captureServices: [.urlSession()],
+                        crashReporter: nil
+                    )
+                )
+                .start()
+        } catch let e {
+            print("Couldn't initialize Embrace SDK: \(e.localizedDescription)")
+        }
         
         return true
     }
