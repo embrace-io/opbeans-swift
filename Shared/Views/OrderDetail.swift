@@ -13,7 +13,6 @@
 //   limitations under the License.
 
 import SwiftUI
-import ElasticApm
 
 struct OrderDetail: View {
     var order : OrderLine
@@ -35,7 +34,7 @@ struct OrderDetail: View {
                     .foregroundColor(.gray)
                     .font(.caption)
             }
-        }.reportName("Order Detail - view appearing")
+        }
     }
    
 }

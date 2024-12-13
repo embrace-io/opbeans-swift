@@ -103,7 +103,7 @@ struct ProductDetail : View {
                     })) ? "cart.badge.minus.fill" : "cart.badge.plus")
                 }.accessibilityLabel("CartToggle")
             }
-        }.reportName("Product Detail - view appearing")
+        }
     }
 }
 
