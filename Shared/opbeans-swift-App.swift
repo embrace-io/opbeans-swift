@@ -24,9 +24,7 @@ class AppDelegate : NSObject, UIApplicationDelegate {
             try Embrace
                 .setup(
                     options: .init(
-                        appId: "replace-me",
-                        captureServices: [.urlSession()],
-                        crashReporter: nil
+                        appId: "replace-me"
                     )
                 )
                 .start()
