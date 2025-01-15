@@ -836,7 +836,7 @@
 			repositoryURL = "https://github.com/embrace-io/embrace-apple-sdk";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 6.6.0;
+				minimumVersion = 6.7.0;
 			};
 		};
 		F639652B278E50FE00B3C327 /* XCRemoteSwiftPackageReference "opentelemetry-swift" */ = {
